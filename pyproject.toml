@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "remedy-core"
+version = "0.1.0"
+description = "Persistent retrieval-state control for training-free multimodal inference"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+retrieval = ["numpy>=1.24"]
+vision = ["numpy>=1.24", "Pillow>=10", "torch>=2", "open_clip_torch>=2.24"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
